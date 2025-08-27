@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMK Negeri 1 Lusiana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SMK Negeri 1 Lusiana</h1>
+      <nav>
+        <ul>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#jurusan">Jurusan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="marquee">
+  <p>🎉 Selamat datang di website resmi SMK Negeri 1 Lusiana! Pendaftaran siswa baru dibuka mulai 1 September 2025. 🎓</p>
+</div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Selamat Datang di Website Resmi</h2>
+      <p>SMK Negeri 1 Lusiana – Sekolah Vokasi Berkualitas</p>
+      <a href="#profil" class="btn">Lihat Profil Sekolah</a>
+    </div>
+  </section>
+
+  <section id="profil" class="content">
+    <div class="container">
+      <h3>Profil Sekolah</h3>
+      <p>SMK Negeri 1 Lusiana adalah sekolah yang menggabungkan pendidikan berkualitas dengan pelatihan keterampilan nyata, sehingga lulusan siap langsung terjun ke dunia kerja. Dengan suasana belajar yang dinamis dan dukungan teknologi terkini, siswa diajak untuk terus berkembang dan berinovasi.</p>
+      <br>
+      <p>Di SMK Negeri 1 Lusiana, setiap siswa tidak hanya belajar ilmu, tapi juga dibentuk menjadi pribadi mandiri dan kreatif. Sekolah ini menjadi tempat yang tepat untuk mewujudkan impian dan membuka jalan menuju masa depan sukses.</p>
+    </div>
+  </section>
+
+  <section id="jurusan" class="content gray">
+    <div class="container">
+      <h3>Jurusan Unggulan</h3>
+      <ul>
+        <li>Teknik Komputer dan Jaringan</li>
+        <li>Rekayasa Perangkat Lunak</li>
+        <li>Desain Komunikasi Visual</li>
+        <li>Akuntansi dan Keuangan Lembaga</li>
+        <li>Layanan Perbankan Syariah</li>
+        <li>Managemen Perkantoran</li>
+        <li>Bisnis Ritel</li>
+        <li>Bisnis Digital</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak" class="content">
+    <div class="container">
+      <h3>Kontak Kami</h3>
+      <p>Email: info@lusianadwiyuniarti.sch.id</p>
+      <p>Telepon: +62 897-1554-395</p>
+      <p>Alamat: Jl. Parangtritis No.KM.11, Dukuh, Sabdodadi, Kec. Bantul, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55715</p>
+      <!-- Google Maps Embed-->
+      <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0493324861227!2d110.35305437613161!3d-7.889907978489525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7b00889ad8f84d%3A0x2e0009ca7815eaf0!2sSMK%20Negeri%201%20Bantul!5e0!3m2!1sid!2sid!4v1755582328407!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></>"
+          </iframe>
+    </div>
+    <section id="daftar" class="content gray">
+  <div class="container">
+    <h3>Formulir Pendaftaran</h3>
+    <form id="formPendaftaran">
+      <label for="nama">Nama Lengkap:</label><br>
+      <input type="text" id="nama" name="nama" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="jurusan">Pilih Jurusan:</label><br>
+      <select id="jurusan" name="jurusan" required>
+        <option value="">-- Pilih Jurusan --</option>
+        <option value="TKJ">Teknik Komputer dan Jaringan</option>
+        <option value="RPL">Rekayasa Perangkat Lunak</option>
+        <option value="DKV">Desain Komunikasi Visual</option>
+        <option value="AKL">Akuntansi dan Keuangan Lembaga</option>
+        <option value="PBS">Perbankan Syariah</option>
+      </select><br><br>
+
+      <button type="submit">Daftar Sekarang</button>
+    </form>
+    <p id="pesanSukses" style="display: none; color: green; margin-top: 15px;">✅ Pendaftaran berhasil dikirim!</p>
+  </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SMK Negeri 1 Lusiana. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Tombol Dark Mode -->
+<button id="darkModeToggle">🌙 Dark Mode</button>
+
+<!-- Tombol Scroll to Top -->
+<button id="scrollTopBtn">⬆️</button>
+
+<script>
+  // Dark mode toggle
+  const toggleBtn = document.getElementById('darkModeToggle');
+  toggleBtn.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      toggleBtn.textContent = '☀️ Light Mode';
+    } else {
+      toggleBtn.textContent = '🌙 Dark Mode';
+    }
+  });
+
+  // Scroll to Top button
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  });
+
+  scrollBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
